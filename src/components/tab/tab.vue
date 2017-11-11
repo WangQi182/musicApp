@@ -1,5 +1,5 @@
 <template>
-  <div class="tab">
+  <div class="tab" @touchmove.prevent>
   	<router-link tag="div" class="tab-item" to="/recommend">
   		<span class="tab-link">推荐</span>
   	</router-link>

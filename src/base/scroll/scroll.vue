@@ -3,7 +3,7 @@
   	<slot></slot>
   </div>
 </template>
-<script type="text/ecmascript-6">
+<script>
   import BScroll from 'better-scroll'
   export default {
     props: {
@@ -41,7 +41,6 @@
         if (this.listenScroll) {
           let me = this
           this.scroll.on('scroll', (pos) => {
-            console.log(pos)
             me.$emit('scroll', pos)
           })
         }
@@ -53,7 +52,6 @@
         this.scroll && this.scroll.disable()
       },
       refresh() {
-        console.log(111)
         this.scroll && this.scroll.refresh()
       },
       scrollTo() {
@@ -66,7 +64,6 @@
     watch: {
       data() {
         setTimeout(() => {
-          console.log(1)
           this.refresh()
         }, 20)
       }
